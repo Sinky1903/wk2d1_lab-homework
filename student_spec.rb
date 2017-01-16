@@ -26,20 +26,20 @@ class TestStudent < MiniTest::Test
     @daniel.cohort = 12
     assert_equal("Ryan", @daniel.name)
     assert_equal(12, @daniel.cohort)
-    puts @daniel.name
-    puts @daniel.cohort
+    # puts @daniel.name
+    # puts @daniel.cohort
   end
 
 
 def test_make_student_talk()
   assert_equal("I can talk", @daniel.talk)
-  puts @daniel.talk
+  # puts @daniel.talk
 end
 
 
 def test_add_fave_language()
-assert_equal("I love French", @daniel.fave_lang("French"))
-puts @daniel.fave_lang("Ruby")
+assert_equal("I love Ruby", @daniel.fave_lang("Ruby"))
+# puts @daniel.fave_lang("Ruby")
 end
 
 end

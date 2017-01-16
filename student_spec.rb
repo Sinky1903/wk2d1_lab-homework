@@ -7,7 +7,7 @@ class TestStudent < MiniTest::Test
 
 
   def setup
-    @daniel = Student.new("Daniel", 1, "I can talk")
+    @daniel = Student.new("Daniel", 1)
   end
 
 
@@ -32,8 +32,14 @@ class TestStudent < MiniTest::Test
 
 
 def test_make_student_talk()
-  assert_equal("I can talk", @daniel.speech)
-  puts @daniel.speech
+  assert_equal("I can talk", @daniel.talk)
+  puts @daniel.talk
+end
+
+
+def test_add_fave_language()
+assert_equal("I love French", @daniel.fave_lang("French"))
+puts @daniel.fave_lang("Ruby")
 end
 
 end
